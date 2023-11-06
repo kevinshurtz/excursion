@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "excursion-cli"
+version = "0.1.0"
+description = "A command line utility for interacting with Google Drive"
+authors = ["kevinshurtz <kevin.shurtz@kevinshurtz.net>"]
+readme = "README.md"
+packages = [{include = "excursion_cli", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "2.21.0"
+click = "7.0"
+colorama = "0.4.1"
+windows-curses = {markers = "platform_system == \"Windows\"", version = "^2.3.1"}
+pick = "0.6.4"
+google-api-python-client = "1.7.8"
+oauth2client = "4.1.3"
+prettytable = "0.7.2"
+httplib2 = "0.12.1"
+pyfiglet = "0.8.post1"
+
+[tool.poetry.scripts]
+excursion-cli = 'excursion_cli.dcli:cli'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
