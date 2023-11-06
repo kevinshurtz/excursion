@@ -27,6 +27,16 @@ pre-commit = "^3.5.0"
 pylint = "^3.0.2"
 autopep8 = "^2.0.4"
 
+[tool.autopep8]
+max_line_length = 120
+in-place = true
+recursive = true
+aggressive = 3
+
+[tool.pylint.messages_control]
+max-line-length = 120
+disable = ["missing-docstring"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
