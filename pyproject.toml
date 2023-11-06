@@ -22,6 +22,9 @@ pyfiglet = "0.8.post1"
 [tool.poetry.scripts]
 excursion-cli = 'excursion_cli.dcli:cli'
 
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
